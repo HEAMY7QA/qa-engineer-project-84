@@ -15,6 +15,20 @@
     В коде отсутсвует ссылка на картинку (DevTools -> Elements)
 
 - summary: |
+    Нет перевода описания товаров 
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Нажать на вкладку Language
+    3. Выбрать Russian
+  expected-result: |
+    Описание товаров меняется на русский язык
+  actual-result: |
+    Описание на русском языке отсутсвует
+    
+- summary: |
     Адаптивность интерфеса 
   environment: |
     Яндекс Браузер	24.6.1.766 (64-bit)
@@ -113,6 +127,131 @@
   actual-result: |
     На сайте отображены товары, стоимость которых больше 9 без скидки
 
+- summary: |
+    Выравнивание таблицы количества товаров в Cart 
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину 
+    3. Нажать на Cart
+  expected-result: |
+    Значения количества товаров, добавленных товаров, будут выравнены в таблице
+  actual-result: |
+    Положение значения количества товаров зависит от длины названия товара
+
+- summary: |
+    Выравнивание таблицы товаров в Cart 
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину 
+    3. Нажать на Cart
+  expected-result: |
+    Таблица товаров будет выравнена для каждого из пунктов
+  actual-result: |
+    Положение значения количества товаров, кнопки Delete зависит от длины названия товара, ошибка в верстве
+
+- summary: |
+    Выравнивание таблицы товаров в Cart 
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину 
+    3. Нажать на Cart
+  expected-result: |
+    Таблица товаров будет выравнена для каждого из пунктов
+  actual-result: |
+    Положение значения количества товаров, кнопки Delete зависит от длины названия товара, ошибка в верстве
+
+- summary: |
+    Ошибка 500 при оформлении заказа
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину 
+    3. Нажать на Cart
+    4. Нажать на Checkout
+  expected-result: |
+    Заказ отправлен на сервер для обработки 
+  actual-result: |
+    Ошибка 500 Internal Server Error
+
+- summary: |
+    Не работает кнопка закрытия вкладки Order placed successfully в правом верхнем углу
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину 
+    3. Нажать на Cart
+    4. Нажать на Checkout
+    5. Нажать на крестик в верхнем правом углу
+  expected-result: |
+    Окно Order placed successfully будет закрыто 
+  actual-result: |
+    Кнопка закрывания окна в правом верхнем углу не активна
+
+- summary: |
+    Опечатка в слове оформлен в окне Заказ успешно оформлен 
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину
+    3. Нажать на вкладку Language и выбрать Russian
+    3. Нажать на Корзина
+    4. Нажать на Оформить заказ
+  expected-result: |
+    В всплывающем окне заголовок Заказ успешно оформлен 
+  actual-result: |
+    В всплывающем окне заголовок Заказ успешно формлен 
+
+- summary: |
+    Часть товаров не отображаются при возврате назад с последней страницы
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Нажать на Next 6 раз
+    3. Нажать на Previous 6 раз
+  expected-result: |
+    Список товаров совпадает с изначальным
+  actual-result: |
+    При возврате с последней страницы с товарами, товары с id номера с 1 по 18 не отображаются
+
+- summary: |
+    Проблема очистки Cart при обновлении страницы через F5
+  environment: |
+    Яндекс Браузер	24.6.1.766 (64-bit)
+    ОС Windows 10 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу магазина https://hexlet-products-store.vercel.app/
+    2. Добавить два разных товара в корзину 
+    3. Нажать на Cart
+    4. Нажать на Clear cart
+    5. Нажать на Continue shopping
+    6. Нажать на клавиатуре F5
+  expected-result: |
+    При обновлении страницы Cart должен оставаться пустым
+  actual-result: |
+    При обновлении страницы в Cart отображаются два товара, ранее удаленные через кнопку Clear cart
+
+
+
+
+
+    
 
 
     
