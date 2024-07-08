@@ -2,11 +2,11 @@
 test-cases:
     - summary: |
         Нет иконки англиского языка во вкладке Language
-      status: pass
+    status: pass
 
     - summary: |
         Нет перевода описания товаров 
-      status: fail
+    status: fail
     
     - summary: |
         Адаптивность интерфеса 
