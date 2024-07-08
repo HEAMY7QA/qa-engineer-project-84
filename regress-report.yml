@@ -70,10 +70,10 @@ test-cases:
     
 bugreports:
     - summary: |
-        Отсутвие кнопки Next при работе с фильтрами товаров
+      Отсутвие кнопки Next при работе с фильтрами товаров
     environment: |
-        Яндекс Браузер	24.6.1.766 (64-bit)
-        ОС Windows 10 22
+      Яндекс Браузер	24.6.1.766 (64-bit)
+      ОС Windows 10 22
     steps-to-reproduce: |
       1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
       2. Нажать на любой фильтр выбора товара
