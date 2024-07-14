@@ -54,4 +54,96 @@
   expected-result: |
     На странице отображается список товаров, который состоит из тех товаров, у которых стоимость от 3$ до 5$
 
+- summary: |
+    Проверка счетчика товаров в Cart
+  requirement: |
+    При добавлении товаров в корзину, счетчик количества товаров увеличивается рядом с кнопкой Cart
+  prerequisites: |
+    Открыта страница магазина
+  test-data: |
+    Товар = Essence Mascara Lash Princess
+  steps:
+    - Добавить товар в корзину 
+    - Повторить первый пунк еще 2 раза 
+  expected-result: |
+    На странице, возле кнопки Cart, счетчик количества добавленного товара ровняется трем
+
+- summary: |
+    Удаление товара из Cart
+  requirement: |
+    При нажатии на кнопку Delete, товар удаляется из списка
+  prerequisites: |
+    Открыта страница магазина
+  test-data: |
+    Товар = Essence Mascara Lash Princess
+  steps:
+    - Добавить товар в корзину в размере 1 шт
+    - Перейти во вкладку Cart
+    - Нажать на кнопку Delete
+  expected-result: |
+    На странице Cart, в таблице товаров пусто
+
+- summary: |
+    Удаление товара из Cart кнопкой Clear cart
+  requirement: |
+    При нажатии на кнопку Clear cart, все товары удаляются из списка Cart
+  prerequisites: |
+    Открыта страница магазина
+  test-data: |
+    Товар = Essence Mascara Lash Princess
+    Товар = Eyeshadow Palette with Mirror
+  steps:
+    - Добавить товары в корзину
+    - Перейти во вкладку Cart
+    - Нажать на кнопку Clear cart 
+  expected-result: |
+    На странице Cart, в таблице товаров пусто
+    
+- summary: |
+    Проверка работы кнопки Continue shopping 
+  requirement: |
+    При нажатии кнопки Continue shopping, пользователь переходит на страницу магазина
+  prerequisites: |
+    Открыта страница магазина
+  test-data: |
+    Отсутствуют
+  steps:
+    - Нажать на кнопку Next 
+    - Нажать на кнопку Cart
+    - Нажать на кнопку Continue shopping
+  expected-result: |
+    Пользователя переправляет на страницу два магазина, с которой он перешел в Cart
+
+- summary: |
+    Проверка перехода на страницу выбранного товара  
+  requirement: |
+    При нажатии на любую область карточки товара, пользователь переходит на страницу товара
+  prerequisites: |
+    Открыта страница магазина
+  test-data: |
+    Товар = Essence Mascara Lash Princess
+  steps:
+    - Нажать на карточку товара Essence Mascara Lash Princess 
+  expected-result: |
+    Открывается страница товара Essence Mascara Lash Princess
+
+- summary: |
+    Проверка отправки данных об оформленном заказе   
+  requirement: |
+    При нажатии на кнопку  Checkout, на сервер отправляется данные о заказе
+  prerequisites: |
+    Открыта страница магазина
+  test-data: |
+    Товар = Essence Mascara Lash Princess
+  steps:
+    - Добавить товар в корзину 
+    - Нажать на кнопку Cart
+    - Зайти в DevTools в браузере
+    - Перейти во вкладку Network
+    - Нажать на кнопку Checkout 
+  expected-result: |
+    Код статуса запроса = 200
+
+
+
     
