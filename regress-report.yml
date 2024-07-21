@@ -1,57 +1,45 @@
 ---
 test-cases:
     - summary: |
-        Нет иконки англиского языка во вкладке Language
+        Проверка работы поля "Поиск"
       status: pass
 
     - summary: |
-        Нет перевода описания товаров 
-      status: fail
-    
-    - summary: |
-        Адаптивность интерфеса 
+        Проверка работы фильрации товаров по категориям 
       status: pass
     
     - summary: |
-        Нет сброса выбранной категории во вкладке Category 
-      status: pass
-
-    - summary: |
-        В фильтре Brand нет названия для фильтра товаров, у которых нет бренда 
-      status: pass
-
-    - summary: |
-        В фильтре Price можно ввести отрицательное значение в обоих ячейках
-      status: fail
-
-    - summary: |
-        В фильтре Price неправильная фильтрация по минимальной цене
-      status: pass
-
-    - summary: |
-        Выравнивание данных в таблице товаров в Cart
-      status: fail
-
-    - summary: |
-        Ошибка 500 при оформлении заказа
-      status: fail
-
-    - summary: |
-        Не работает кнопка закрытия вкладки Order placed successfully в правом верхнем углу
-      status: fail
-
-    - summary: |
-        Опечатка в слове оформлен в окне Заказ успешно оформлен 
-      status: fail
-
-    - summary: |
-        Часть товаров не отображаются при возврате назад с последней страницы
-      status: pass
-
-    - summary: |
-        Ошибка очистки Cart при обновлении страницы с использованием клавиатуры "F5"
+        Проверка работы перевода магазина на представленные языки
       status: fail
     
+    - summary: |
+        Проверка работы фильтрации по цене 
+      status: pass
+
+    - summary: |
+        Проверка счетчика товаров в Cart
+      status: pass
+
+    - summary: |
+        Удаление товара из Cart
+      status: pass
+
+    - summary: |
+        Удаление товара из Cart кнопкой Clear cart
+      status: pass
+
+    - summary: |
+        Проверка работы кнопки Continue shopping
+      status: pass
+
+    - summary: |
+        Проверка перехода на страницу выбранного товара
+      status: fail
+
+    - summary: |
+        Проверка отправки данных об оформленном заказе   
+      status: fail
+
 bugreports:
     - summary: |
         Отсутвие кнопки Next при работе с фильтрами товаров
