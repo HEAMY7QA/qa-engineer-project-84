@@ -14,3 +14,27 @@
 - summary: |
     Проверка работы фильтрации по цене
   status: pass
+
+- summary: |
+    Проверка счетчика товаров в Cart
+  status: pass
+
+- summary: |
+    Удаление товара из Cart
+  status: pass
+
+- summary: |
+    Удаление товара из Cart кнопкой Clear cart
+  status: pass
+
+- summary: |
+    Проверка работы кнопки Continue shopping 
+  status: pass
+
+- summary: |
+    Проверка перехода на страницу выбранного товара 
+  status: pass
+
+- summary: |
+    Проверка отправки данных об оформленном заказе  
+  status: fall
