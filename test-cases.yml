@@ -152,10 +152,10 @@
     Brand = Dior
     Brand = Annibale Colombo
   steps:
-    - Активировать чек-бокс в фильтре brand: Dior
-    - Активировать чек-бокс в фильтре brand: Annibale Colombo
+    - Активировать чек-бокс в фильтре brand Dior
+    - Активировать чек-бокс в фильтре brand Annibale Colombo
   expected-result: |
-    На странице отображаются следующие товары: 
+    На странице отображаются следующие товары
         - Dior J'adore
         - Annibale Colombo Bed
         - Annibale Colombo Sofa
