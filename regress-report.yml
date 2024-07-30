@@ -48,12 +48,14 @@ bugreports:
         ОС Windows 10 22
       steps-to-reproduce: |
         1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-        2. Нажать на любой фильтр выбора товара
+        2. Нажать на Next
+        3. Выбрать фильтр по бренду: без бренда (пустой чек-бокс).
+        4. Нажать на Previous
       expected-result: |
         Все функциональные кнопки работают и остаются на своих местах (Next)
       actual-result: |
-        На странице пропадает кнопка Next (передистывание списка) при работе с фильрами товаров
-        Ошибка изображена на скриншоте Pictures bugreports/next.png
+        На странице пропадает кнопка Next при работе с фильрами товаров
+        Ошибка изображена на скриншоте Pictures bugreports/next new.png
     
     - summary: |
         Отображение стоимости одного товара в Cart при покупке больше одного
@@ -82,3 +84,17 @@ bugreports:
         Обвноляется страница и сбрасываются фильтры
       actual-result: |
         Не обвновляется страница, прогружается только логотип сайта
+
+    - summary: |
+        Адаптивность страници
+      environment: |
+        Яндекс Браузер	24.6.1.766 (64-bit)
+        ОС Windows 10 22
+      steps-to-reproduce: |
+        1. Зайти на страницу магазина https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+        2. В фильтре по стоимости ввести в поле To = 1
+      expected-result: |
+        Появляются товары с выбранным диапозоном и разметка сайта не нарушается
+      actual-result: |
+        Нарушается разметка страницы 
+        Ошибка изображена на скриншоте Pictures bugreports/page adaptability.png
